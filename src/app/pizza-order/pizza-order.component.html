@@ -1,0 +1,30 @@
+<div>
+  <h2>Simple Pizza Ordering System</h2>
+  <label for="pizza-size">Choose Pizza Size:</label>
+  <select id="pizza-size" [(ngModel)]="selectedSize" (ngModelChange)="calculateTotalCost()">
+    <option *ngFor="let size of pizzaSizes" [ngValue]="size">{{ size.name }} - ${{ size.price }}</option>
+  </select>
+
+  <h3>Veg Toppings:</h3>
+  <div *ngFor="let topping of vegToppings">
+    <label>
+      <input type="checkbox" [(ngModel)]="topping.checked" (ngModelChange)="calculateTotalCost()" />
+      {{ topping.name }} - ${{ topping.price }}
+    </label>
+  </div>
+
+  <h3>Non Veg Toppings:</h3>
+  <div *ngFor="let topping of nonVegToppings">
+    <label>
+      <input type="checkbox" [(ngModel)]="topping.checked" (ngModelChange)="calculateTotalCost()" />
+      {{ topping.name }} - ${{ topping.price }}
+    </label>
+  </div>
+
+  <h3>Promotional Offers:</h3>
+  <select [(ngModel)]="selectedOffer" (ngModelChange)="calculateTotalCost()">
+    <option *ngFor="let offer of offers" [ngValue]="offer">{{ offer.name }} = ${{ offer.price }}</option>
+  </select>
+
+  <h2>Total Cost: ${{ totalCost.toFixed(2) }}</h2>
+</div>
