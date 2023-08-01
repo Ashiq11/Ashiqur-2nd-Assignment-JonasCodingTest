@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h2>Simple Pizza Ordering System</h2>
   <label for="pizza-size">Choose Pizza Size:</label>
   <select id="pizza-size" [(ngModel)]="selectedSize" (ngModelChange)="calculateTotalCost()">
@@ -27,4 +27,64 @@
   </select>
 
   <h2>Total Cost: ${{ totalCost.toFixed(2) }}</h2>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Simple Pizza Ordering System</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2" >Toppings</th>
+            <th scope="col" colspan="4" style="text-align: center">Pizza Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td scope="col" *ngFor="let size of pizzaSizes"><b>{{ size.name }} (${{ size.price.toFixed(2) }})</b></td>
+          </tr>
+          <tr>
+            <td colspan="5"><b>Veg Toppings</b></td>
+          </tr>
+          <tr *ngFor="let topping of vegToppings">
+            <td>{{ topping.name }} (${{ topping.price.toFixed(2) }})</td>
+            <td *ngFor="let size of pizzaSizes">
+              <input type="checkbox" [(ngModel)]="topping.checked" (ngModelChange)="calculateTotalCost()" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5"><b>Non Veg Toppings</b></td>
+          </tr>
+          <tr *ngFor="let topping of nonVegToppings">
+            <td>{{ topping.name }} (${{ topping.price.toFixed(2) }})</td>
+            <td *ngFor="let size of pizzaSizes">
+              <input type="checkbox" [(ngModel)]="topping.checked" (ngModelChange)="calculateTotalCost()" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5"><b>Total</b></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><b>Promotional Offers</b></td>
+            <td colspan="4">
+              <select [(ngModel)]="selectedOffer" (ngModelChange)="calculateTotalCost()">
+                <option *ngFor="let offer of offers" [ngValue]="offer">{{ offer.name }}</option>
+              </select>
+            </td>
+          </tr>
+            <tr>
+            <td *ngFor="let size of pizzaSizes">
+              - ${{ offerPrice.toFixed(2) }}
+            </td>
+          </tr>
+          <tr>
+            <td><b>Total Cost :</b></td>
+            <td *ngFor="let size of pizzaSizes">= ${{ totalCost.toFixed(2) }}</td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -18,6 +18,7 @@ export class PizzaOrderComponent implements OnInit {
   selectedVegToppings: any[] = [];
   selectedNonVegToppings: any[] = [];
   selectedOffer: any;
+  offerPrice: number = 0;
   totalCost: number = 0;
 
   constructor(private pizzaService: PizzaService) { }
