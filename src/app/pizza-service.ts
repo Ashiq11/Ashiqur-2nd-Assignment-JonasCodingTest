@@ -27,10 +27,9 @@ export class PizzaService {
   ];
 
   offers = [
-    { name: 'Select the offer', price: 0 },
-    { name: 'Offer 1 - 1 Medium with 2 toppings', price: 5 },
-    { name: 'Offer 2 - 2 Medium Pizzas with 4 toppings each', price: 9 },
-    { name: 'Offer 3 - 1 Large with 4 toppings(Pepperoni and Barbecue chicken are counted as 2 topping) - 50% discount', price: 6.50 }
+    { name: 'Offer 1 -', descriptin: '1 Medium with 2 toppings', price: 5 },
+    { name: 'Offer 2 -', descriptin: '2 Medium Pizzas with 4 toppings each', price: 9 },
+    { name: 'Offer 3 -', descriptin: '1 Large with 4 toppings(Pepperoni and Barbecue chicken are counted as 2 toppings)- 50% discount' }
   ];
   constructor() { }
 
