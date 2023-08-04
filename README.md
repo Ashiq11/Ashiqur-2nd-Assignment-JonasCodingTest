@@ -1,27 +1,38 @@
-# Angular
+"Simple Pizza Ordering System"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+Pizza Sizes:
 
-## Development server
+Small-$5 
+Medium-$7
+Large-$8
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Extra Large-$9
 
-## Code scaffolding
+Toppings:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Veg Options:
 
-## Build
+Tomatoes ($1.00)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Onions-($0.50)
 
-## Running unit tests
+Bell pepper-[$1.00)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Mushrooms-($1.20)
 
-## Running end-to-end tests
+Pineapple-($0.75)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Non Veg options:
 
-## Further help
+Sausage ($1.00)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pepperoni (52.00)
+
+Barbecue chicken ($3.00)
+
+Promotional Offers:
+
+Offer 1 - 1 Medium with 2 topping $5 
+offer 2 - 2 Medium Pizza with 4 topping each $5
+
+Offer 3 - 1 Large with 4 toppings(Pepperoni and Barbecue chicken are counted as 2 topping)-50% discount
